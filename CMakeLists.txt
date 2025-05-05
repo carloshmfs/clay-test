@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(test_clay CXX)
 
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CLAY_INCLUDE_ALL_EXAMPLES OFF)
 set(FETCHCONTENT_QUIET FALSE)
@@ -55,3 +56,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 	SDL3_ttf::SDL3_ttf
 	SDL3_image::SDL3_image
 )
+
+target_include_directories(${PROJECT_NAME} PRIVATE include)
